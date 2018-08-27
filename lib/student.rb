@@ -1,7 +1,7 @@
 class Student
   attr_accessor :id, :name, :grade
 
-  def self.students_below_12th
+  def self.students_below_12th_grade
     sql = <<-SQL
       SELECT * FROM students
       WHERE grade < 12
