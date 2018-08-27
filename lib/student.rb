@@ -22,6 +22,9 @@ class Student
       WHERE student.name = ?
     SQL
 
+  t = DB[:conn].execute(sql, name).map{|row| self.new_from_db(row)}
+    binding.pry
+
 
   end
 
