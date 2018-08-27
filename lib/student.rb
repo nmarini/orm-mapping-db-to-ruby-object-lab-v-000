@@ -22,10 +22,10 @@ class Student
       WHERE student.name = ?
     SQL
 
-    t = DB[:conn].execute(sql).map do |row|
+     DB[:conn].execute(sql).map do |row|
        self.new_from_db(row)
      end
-    binding.pry
+
   end
 
   def save
